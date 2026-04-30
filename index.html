@@ -1,116 +1,146 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>人间一趟，看看太阳</title>
-		<meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alpha Liu (dittoliu) - Front-end Web Developer Portfolio. Skilled in React, Vue, and modern web technologies.">
+    <title>Alpha Liu | Front-End Developer</title>
     <link rel="shortcut icon" href="images/favicon.png"/>
-    <link rel="bookmark" href="images/favicon.png"/>
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <style>
-      html,body {
-        width: 100%;
-        height: 100%;
-      }
-      #wrapper{
-        position: relative;
-      }
-      #canvasWrapper {
-        -moz-transform: scale(1.0);
-        -webkit-transform: scale(1.0);
-        -ms-transform: scale(1.0);
-        transform: scale(1.0);
-        -webkit-backface-visibility: hidden;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-      }
-    </style>
-	</head>
-	<body>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-        <div id="canvasWrapper"></div>
-				<!-- Header -->
-					<header id="header">
-						<div class="logo" style="overflow: hidden;">
-							<img src="https://avatars1.githubusercontent.com/u/19685814?s=400&u=255c2f94f6d9a60689024832c82064cebbb42a37&v=4" alt="" width="100%" height="100%" style="transform: scale(1.5)">
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Alpha Liu</h1>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#work">Work</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Alpha.</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-				<!-- Main -->
-					<div id="main">
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="container">
+                <div class="hero-content glass-card fade-in">
+                    <div class="avatar-container">
+                        <img src="https://avatars.githubusercontent.com/u/19685814?v=4" alt="Alpha Liu" class="avatar">
+                    </div>
+                    <h1>Hi, I'm <span class="highlight">Alpha Liu</span></h1>
+                    <p class="subtitle">Front-End Web Developer</p>
+                    <p class="bio">I build stunning, high-performance web applications with modern technologies.</p>
+                    <div class="action-buttons">
+                        <a href="#work" class="btn primary">View My Work</a>
+                        <a href="#contact" class="btn secondary">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/front-end-skills.png" alt="" /></span>
-								<p>I'm a Front-end web developer, you can check out my <a href="#work">awesome work</a>.</p>
-							</article>
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <h2 class="section-title fade-in">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text glass-card fade-in slide-left">
+                        <p>Beyond HTML, CSS, DOM, JavaScript, I am highly skilled in building robust single-page applications using <strong>React</strong> and <strong>Vue</strong>.</p>
+                        <p>I focus on creating exceptional user experiences with modern aesthetics, performance optimization, and clean code.</p>
+                    </div>
+                    <div class="skills-container glass-card fade-in slide-right">
+                        <h3>Core Technologies</h3>
+                        <div class="skills-tags">
+                            <span class="tag">JavaScript (ES6+)</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">HTML5 / CSS3</span>
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Tailwind CSS</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Work</h2>
-                <span class="image main"><img src="images/banner.png" alt="" /></span>
-								<p><a href="http://www.fengting.io">官网项目</a></p>
-								<p>手机h5项目</p>
-								<p><a href="http://housebook.vr.ejudata.com/guanggu">光谷</a></p>
-								<p><a href="http://housebook.vr.ejudata.com/redtown">红坊</a></p>
-								<p><a href="http://housebook.vr.ejudata.com/dragon-boat-festival">端午</a></p>
-							</article>
+        <!-- Work Section -->
+        <section id="work" class="work section">
+            <div class="container">
+                <h2 class="section-title fade-in">Selected Work</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item glass-card fade-in">
+                        <div class="portfolio-image" style="background-image: url('images/banner.png'); background-size: cover; background-position: center;"></div>
+                        <div class="portfolio-content">
+                            <h3>Corporate Website</h3>
+                            <p>Official modern corporate website project with interactive elements.</p>
+                            <a href="#" class="btn sm outline">View Details</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item glass-card fade-in" style="transition-delay: 100ms;">
+                        <div class="portfolio-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                        <div class="portfolio-content">
+                            <h3>Mobile H5 Applications</h3>
+                            <p>Responsive, high-performance web applications tailored for mobile browsers.</p>
+                            <a href="#" class="btn sm outline">View Details</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item glass-card fade-in" style="transition-delay: 200ms;">
+                        <div class="portfolio-image" style="background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);"></div>
+                        <div class="portfolio-content">
+                            <h3>Virtual Reality Projects</h3>
+                            <p>Interactive panoramic and 3D web experiences (Guanggu, Redtown, Dragon Boat Festival).</p>
+                            <a href="#" class="btn sm outline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/web-tech-employed.jpg" alt="" /></span>
-								<p>Beyond HTML, CSS, DOM, JavaScript, I could be skilled in React and Vue</p>
-							</article>
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="contact-card glass-card fade-in">
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p>I'm currently open for new opportunities or exciting projects.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/dittoliu" target="_blank" rel="noopener noreferrer" class="social-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            GitHub
+                        </a>
+                        <a href="mailto:contact@example.com" class="social-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            Email Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-                <script charset="utf-8" src="http://wpa.b.qq.com/cgi/wpa.php"></script>
-								<ul class="icons">
-									<li><a href="https://github.com/dittoliu" class="icon fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
-					</div>
+    <footer>
+        <p class="copyright">&copy; <span id="year"></span> Alpha Liu (dittoliu). All rights reserved.</p>
+    </footer>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; dittoliu: <a href="https://github.com/dittoliu">Github</a></p>
-					</footer>
-
-			</div>
-
-		<!-- BG -->
-			<div id="bg"></div>
-      
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-      <script src="assets/js/particles.min.js"></script>
-      <script src="assets/js/config.js"></script>
-	</body>
+    <script src="js/script.js"></script>
+</body>
 </html>
