@@ -148,7 +148,7 @@
     top: 0;
     width: 100%;
     z-index: 100;
-    transition: all 0.3s ease;
+    transition: background 0.3s ease, padding 0.3s ease, border-bottom 0.3s ease, backdrop-filter 0.3s ease;
     padding: 1.5rem 0;
     padding-top: max(1.5rem, env(safe-area-inset-top));
 
@@ -210,6 +210,12 @@
           color: var(--accent);
           &::after { width: 100%; }
         }
+
+        &:focus-visible {
+          outline: 2px solid var(--accent);
+          outline-offset: 4px;
+          border-radius: 4px;
+        }
       }
     }
 
@@ -221,12 +227,18 @@
       flex-direction: column;
       gap: 6px;
 
+      &:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 4px;
+        border-radius: 4px;
+      }
+
       span {
         width: 30px;
         height: 3px;
         background-color: var(--text-primary);
         border-radius: 3px;
-        transition: all 0.3s ease;
+        transition: transform 0.3s ease, opacity 0.3s ease;
       }
     }
   }
@@ -304,12 +316,18 @@
       border-radius: 12px;
       font-weight: 600;
       text-decoration: none;
-      transition: all 0.3s ease;
+      transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       border: 1px solid transparent;
+
+      &:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 4px;
+        border-radius: 12px;
+      }
 
       &.primary {
         background: var(--accent);
@@ -370,7 +388,7 @@
           font-size: 0.9rem;
           font-weight: 600;
           border: 1px solid oklch(0.7 0.15 230 / 0.2);
-          transition: all 0.2s ease;
+          transition: background 0.2s ease, transform 0.2s ease;
 
           &:hover {
             background: oklch(0.7 0.15 230 / 0.2);
@@ -438,7 +456,7 @@
         top: 30px;
         border-radius: 50%;
         z-index: 1;
-        transition: all 0.3s ease;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
       }
 
       &:hover .timeline-dot {
@@ -588,7 +606,13 @@
         text-decoration: none;
         font-weight: 600;
         border: 1px solid var(--glass-border);
-        transition: all 0.3s ease;
+        transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+        &:focus-visible {
+          outline: 2px solid var(--accent);
+          outline-offset: 4px;
+          border-radius: 12px;
+        }
 
         &:hover {
           background: var(--accent);
@@ -704,5 +728,15 @@
     &.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
     &.active span:nth-child(2) { opacity: 0; }
     &.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+  }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
