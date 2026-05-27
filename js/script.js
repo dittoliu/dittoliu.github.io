@@ -2,6 +2,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Current Year for Footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    // Navbar Scroll Effect (Fallback for browsers without animation-timeline)
+    const navbar = document.querySelector('.navbar');
+    if (!CSS.supports('animation-timeline: scroll()') && navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
+
     // Mobile Menu Toggle
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');

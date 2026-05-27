@@ -40,7 +40,6 @@
     background-color: var(--bg-color);
     color: var(--text-primary);
     line-height: 1.6;
-    overflow-x: hidden;
   }
 }
 
@@ -151,12 +150,22 @@
     z-index: 100;
     transition: all 0.3s ease;
     padding: 1.5rem 0;
+    padding-top: max(1.5rem, env(safe-area-inset-top));
 
     /* Scroll driven styling - supported browsers will transition smoothly */
-    /* For fallback we can still use JS, but let's try pure CSS */
-    animation: nav-scroll linear both;
-    animation-timeline: scroll();
-    animation-range: 0 100px;
+    @supports (animation-timeline: scroll()) {
+      animation: nav-scroll linear both;
+      animation-timeline: scroll();
+      animation-range: 0 100px;
+    }
+
+    &.scrolled {
+      background: oklch(0.2 0.05 260 / 0.8);
+      backdrop-filter: blur(12px);
+      padding: 1rem 0;
+      padding-top: max(1rem, env(safe-area-inset-top));
+      border-bottom: 1px solid var(--glass-border);
+    }
     
     .nav-container {
       max-width: 1200px;
@@ -227,6 +236,7 @@
       background: oklch(0.2 0.05 260 / 0.8);
       backdrop-filter: blur(12px);
       padding: 1rem 0;
+      padding-top: max(1rem, env(safe-area-inset-top));
       border-bottom: 1px solid var(--glass-border);
     }
   }
